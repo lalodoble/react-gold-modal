@@ -1,10 +1,19 @@
 {
   "name": "react-gold-modal",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "version": "1.0.1",
+  "description": "Simple animated modal for React.",
   "author": "lalodoble",
   "license": "MIT",
   "repository": "lalodoble/react-gold-modal",
+  "keywords": [
+    "react",
+    "reactjs",
+    "modal",
+    "animated",
+    "alert",
+    "dialog",
+    "component"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -24,7 +33,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0 || ^17.0.0"
   },
 	"dependencies": {
 		"classnames": "^2.3.1",

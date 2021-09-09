@@ -15,9 +15,9 @@ const Modal = ({
 		text: 'Cancel',
 		handler: () => false,
 	},
-	loading = false,
-	loadingDescription = 'Espere un instante...',
-	loadingSpinner = <p>Loading...</p>	,
+	isLoading = false,
+	loadingDescription = 'Loading...',
+	loadingSpinner = null,
 	isVertical = false,
 	...props
 }) => {
@@ -53,7 +53,7 @@ const Modal = ({
 								</div>
 							}
 
-							<div className={classNames('card__body', { 'd-none': loading || (!body && !description) })}>
+							<div className={classNames('card__body', { 'd-none': isLoading || (!body && !description) })}>
 								{body ?
 									body
 									:
@@ -61,14 +61,14 @@ const Modal = ({
 								}
 							</div>
 
-							<div className={classNames('modal__options', { 'd-none': loading }, { '--vertical': isVertical })}>
+							<div className={classNames('modal__options', { 'd-none': isLoading }, { '--vertical': isVertical })}>
 								{options && options.map((opt, i) => {
 									return <button key={i} onClick={opt.handler} className={classNames(opt.className, className)} >{opt.text}</button>
 								})}
 								<button key="cancel" onClick={InternalCancelHandler} className={classNames(cancel.className, className)} >{cancel.text}</button>
 							</div>
 
-							{loading &&
+							{isLoading &&
 								<>
 									{loadingSpinner}
 									{<p className="p-4 pt-0">{loadingDescription}</p>}
