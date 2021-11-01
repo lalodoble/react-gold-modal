@@ -36,21 +36,25 @@ const App = () => {
 }
 ```
 
-## Component Props
+## Required Props
+|Prop Name         |Type                     |Description                                       |
+|------------------|-------------------------|--------------------------------------------------|
+|display           |`bool` (Default false)   |Shows or hides the modal |
+|cancel            |`option` object          |The object for closing the modal |
 
-|Prop Name          |Required  |Type                     |Description                                       |
-|-------------------|----------|-------------------------|--------------------------------------------------|
-|display            |Yes       |`bool` (Default false)   |Shows or hides the modal |
-|cancel             |Yes       |`option` object          |The object for closing the modal |
-|options            |No        |List of `option` object  |The object for closing the modal |
-|className          |No        |`str`                    |Any class to be added to all the options buttons (used for styling) |
-|isVertical         |No        |`bool` (Default false)   |If `true`, the options will be placed vertically |
-|title        		  |No        |`str`                    |Title text for the modal |
-|description   		  |No        |`str`                    |Description text for the modal |
-|body         		  |No        |`any`                    |The body content for the modal |
-|isLoading     		  |No        |`bool` (Default false)   |If `true`, the body and actions will be replaced with a loading state |
-|loadingDescription |No        |`str`                    |Description for the modal loading state |
-|loadingSpinner     |No        |`obj`                    |The spinner object for the modal loading state |
+## Optional Props
+
+|Prop Name           |Type                     |Description                                       |
+|--------------------|-------------------------|--------------------------------------------------|
+|options             |List of `option` object  |The object for closing the modal |
+|className           |`str`                    |Any class to be added to all the options buttons (used for styling) |
+|overlayIsCancel     |`bool`                   |If `true`, clicking the overlay will call the Cancel handler  |
+|isVertical          |`bool` (Default false)   |If `true`, the options will be placed vertically |
+|title        		 |`str`                    |Title text for the modal |
+|description   		 |`str`                    |Description text for the modal |
+|body         		 |`any`                    |The body content for the modal |
+|isLoading     		 |`bool` (Default false)   |If `true`, the body and actions will be replaced with a loading state |
+|loadingContent      |`obj`                    |Content for the modal loading state |
 
 
 ### Option object

@@ -11,7 +11,7 @@
 	backdrop-filter: blur(7px);
 	top: 0;
 	left: 0;
-	overflow-y: scroll;
+	overflow-y: auto;
 
 	.modal__container {
 		width: 100%;
@@ -45,6 +45,7 @@
 		border-radius: 0.75rem;
 		background: #fff;
 		overflow: hidden;
+		position: relative;
 
 		display: flex;
 		flex-direction: column;
@@ -68,8 +69,7 @@
 		}
 
 		.card__title-subtitle {
-			// @apply text-base m-0;
-			margin: 0;
+			margin: .25rem 0 0 0 ;
 			padding: 0;
 			font-size: .9rem;
 			line-height: 1.2em;
@@ -77,6 +77,10 @@
 
 		.card__body {
 			padding: 1rem 2rem;
+		}
+
+		.card__loading {
+			padding: 2rem;
 		}
 	}
 
@@ -99,6 +103,52 @@
 	}
 
 	/*=================================================================================================
+	ICONS
+	=================================================================================================*/
+
+	i.ic {
+		display: inline-block;
+		position: relative;
+		height: 1em;
+		width: 1em;
+		background: transparent 50% no-repeat;
+		transition: all .25s ease-in-out;
+	}
+	i.ic * {
+		transition: all 0s!important;
+	}
+	i.ic svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1em;
+		height: 1em;
+	}
+	i.ic svg circle, i.ic svg ellipse, i.ic svg path {
+		fill: currentColor;
+	}
+
+	.modal__close-button {
+		font-size: 2rem;
+		position: absolute;
+		right: .5rem;
+		top: .5rem;
+		background: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		cursor: pointer;
+		color:rgba(0, 0, 0, .2);
+
+		&:hover {
+			color: rgba(0, 0, 0, .4);
+		}
+	}
+
+	/*=================================================================================================
 	OPTIONS
 	=================================================================================================*/
 	.modal__options {
@@ -111,7 +161,7 @@
 
 		button {
 			flex: 1;
-			outline: none !important;
+			outline: none;
 			padding: 1rem;
 			border: none;
 			border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -136,26 +186,3 @@
 		}
 	}
 }
-
-/*=================================================================================================
-NEW
-=================================================================================================*/
-
-// .card-confirm {
-// 	.card__title {
-// 		font-family: 'Open Sans';
-// 		@apply text-h5 p-4 pb-2 text-center;
-
-// 		.card__title-title {
-// 			@apply text-h5 font-bold;
-// 		}
-
-// 		.card__title-subtitle {
-// 			@apply text-base m-0;
-// 		}
-// 	}
-
-// 	.card__body {
-// 		@apply py-3;
-// 	}
-// }

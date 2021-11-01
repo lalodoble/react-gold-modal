@@ -2,7 +2,13 @@
     "workbench.colorCustomizations": {
 		"statusBar.background": "#fff357",
 		"statusBar.foreground": "#15202b",
-		"statusBarItem.hoverBackground": "#ffef24"
+		"statusBarItem.hoverBackground": "#ffef24",
+		"editorGroup.border": "#fff357",
+		"panel.border": "#fff357",
+		"sash.hoverBorder": "#fff357",
+		"sideBar.border": "#fff357",
+		"statusBarItem.remoteBackground": "#fff357",
+		"statusBarItem.remoteForeground": "#15202b"
 	},
     "peacock.color": "#fff024"
 }
